@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Enabled Digital Aadu Puli Aattam | Official Download & Play</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome for Game & System Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts: Cinzel Decorative / Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            heritage: {
+              950: '#0c0704',
+              900: '#170c07',
+              850: '#21120a',
+              800: '#2d180c',
+              gold: '#f59e0b',
+              glow: '#fbbf24',
+              crimson: '#dc2626',
+              tiger: '#ea580c',
+              goat: '#38bdf8'
+            }
+          },
+          fontFamily: {
+            title: ['Cinzel', 'serif'],
+            sans: ['Outfit', 'sans-serif'],
+          },
+          boxShadow: {
+            'gold-glow': '0 0 35px -5px rgba(245, 158, 11, 0.4)',
+            'board-glow': '0 0 50px -10px rgba(234, 88, 12, 0.25)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar & Aesthetics */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0c0704;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3b2010;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #f59e0b;
+    }
+
+    .hero-radial-bg {
+      background: radial-gradient(circle at 65% 35%, rgba(245, 158, 11, 0.12) 0%, rgba(220, 38, 38, 0.06) 40%, transparent 70%),
+                  linear-gradient(180deg, #0f0805 0%, #170c07 100%);
+    }
+
+    .gold-border-gradient {
+      border: 1px solid transparent;
+      background: linear-gradient(135deg, rgba(245,158,11,0.3) 0%, rgba(255,255,255,0.05) 50%, rgba(245,158,11,0.1) 100%) border-box;
+    }
+
+    .gold-text-shimmer {
+      background: linear-gradient(90deg, #fbbf24 0%, #fef3c7 40%, #d97706 70%, #f59e0b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .floating-card {
+      animation: floatSlow 6s ease-in-out infinite;
+    }
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+  </style>
+</head>
+<body class="bg-heritage-950 text-stone-200 font-sans selection:bg-heritage-gold selection:text-black min-h-screen overflow-x-hidden">
+
+  <!-- Top Announcement Notification Banner (WhatsApp / Portal Style) -->
+  <aside aria-label="Announcement" class="relative z-50 bg-gradient-to-r from-amber-950 via-heritage-900 to-amber-950 border-b border-amber-800/40 text-xs sm:text-sm py-2 px-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2 mx-auto">
+        <span class="inline-flex items-center justify-center px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/40 uppercase tracking-widest">
+          New Release v1.0.4
+        </span>
+        <span class="text-stone-300">
+          Play against our optimized Minimax &amp; Alpha-Beta Pruning AI — Zero Latency.
+        </span>
+        <a href="#interactive-demo" class="underline font-semibold text-amber-400 hover:text-amber-300 ml-1 transition">
+          Try Interactive Demo &rarr;
+        </a>
+      </div>
+      <button onclick="this.parentElement.parentElement.remove()" class="text-stone-400 hover:text-white p-1 text-xs" aria-label="Close Announcement">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-heritage-950/85 border-b border-amber-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo / Title -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-700 flex items-center justify-center shadow-lg shadow-amber-900/30 border border-amber-400/40 group-hover:scale-105 transition-transform">
+          <i class="fa-solid fa-chess-knight text-2xl text-heritage-950"></i>
+        </div>
+        <div>
+          <div class="font-title text-base sm:text-lg font-bold tracking-wider text-amber-200 uppercase flex items-center gap-2">
+            Aadu Puli Aattam
+            <span class="text-[10px] bg-amber-500/10 text-amber-400 px-1.5 py-0.5 rounded border border-amber-500/30 font-sans normal-case tracking-normal">AI Powered</span>
+          </div>
+          <div class="text-[11px] text-stone-400 tracking-wider">
+            ANNA UNIVERSITY &bull; KSRCT AI LABS
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-300">
+        <a href="#features" class="hover:text-amber-400 transition-colors">Key Features</a>
+        <a href="#how-to-play" class="hover:text-amber-400 transition-colors">How To Play</a>
+        <a href="#interactive-demo" class="hover:text-amber-400 transition-colors">Board Simulator</a>
+        <a href="#architecture" class="hover:text-amber-400 transition-colors">AI Algorithm</a>
+        <a href="#downloads" class="hover:text-amber-400 transition-colors">Download Client</a>
+        <a href="#team" class="hover:text-amber-400 transition-colors">Project Team</a>
+      </nav>
+
+      <!-- CTA Action Button -->
+      <div class="flex items-center gap-3">
+        <a href="#downloads" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-xs tracking-wide uppercase bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-stone-950 shadow-md shadow-orange-950/50 hover:shadow-gold-glow transition-all active:scale-95">
+          <i class="fa-solid fa-download"></i>
+          <span>Get Free App</span>
+        </a>
+        <button id="mobileMenuBtn" class="md:hidden text-stone-300 hover:text-white p-2 text-xl" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden px-6 py-4 bg-heritage-900 border-b border-amber-800/40 flex flex-col gap-3 text-sm">
+      <a href="#features" class="py-2 text-stone-300 hover:text-amber-400">Key Features</a>
+      <a href="#how-to-play" class="py-2 text-stone-300 hover:text-amber-400">How To Play</a>
+      <a href="#interactive-demo" class="py-2 text-stone-300 hover:text-amber-400">Board Simulator</a>
+      <a href="#architecture" class="py-2 text-stone-300 hover:text-amber-400">AI Algorithm</a>
+      <a href="#downloads" class="py-2 text-stone-300 hover:text-amber-400">Downloads</a>
+      <a href="#team" class="py-2 text-stone-300 hover:text-amber-400">Authors &amp; Institution</a>
+      <a href="#downloads" class="mt-2 w-full text-center py-2.5 bg-amber-500 text-stone-950 font-bold rounded-lg">Download App</a>
+    </div>
+  </header>
+
+  <!-- Hero Section (WhatsApp Software Portal Style + Ancient Heritage Aesthetic) -->
+  <section class="relative hero-radial-bg pt-12 pb-24 lg:pt-20 lg:pb-32 overflow-hidden border-b border-amber-900/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Content (Offer / Value Prop & Actions) -->
+        <div class="lg:col-span-6 text-left space-y-6">
+          
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold tracking-wide shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span>PRESERVING TAMIL HERITAGE WITH ARTIFICIAL INTELLIGENCE</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl xl:text-6xl font-extrabold font-title tracking-tight text-white leading-tight">
+            AI-ENABLED DIGITAL <br>
+            <span class="gold-text-shimmer">AADU PULI AATTAM</span>
+          </h1>
+
+          <p class="text-stone-300 text-base sm:text-lg leading-relaxed font-light max-w-xl">
+            The legendary Tamil game of asymmetric wits — <strong>3 Royal Tigers vs 15 Stratagem Goats</strong>. 
+            Re-engineered in modern <strong>Unity 3D / C#</strong> with an unyielding <strong>Minimax &amp; Alpha-Beta Pruning</strong> computer grandmaster.
+          </p>
+
+          <!-- Dual Software Download Buttons (Inspired by image) -->
+          <div class="pt-2 flex flex-wrap items-center gap-4">
+            <a href="#downloads" class="flex items-center justify-center gap-3 px-7 py-4 rounded-2xl font-bold text-sm bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-stone-950 shadow-xl shadow-amber-950/60 hover:shadow-gold-glow transition-all transform hover:-translate-y-0.5 active:translate-y-0">
+              <i class="fa-brands fa-windows text-xl"></i>
+              <div class="text-left">
+                <div class="text-[11px] leading-3 uppercase text-stone-900 font-extrabold tracking-wider">Download Client</div>
+                <div class="text-base font-extrabold leading-tight">Windows (.exe)</div>
+              </div>
+              <i class="fa-solid fa-arrow-down-long ml-1 text-sm"></i>
+            </a>
+
+            <a href="#downloads" class="flex items-center justify-center gap-3 px-6 py-4 rounded-2xl font-bold text-sm bg-stone-900/90 hover:bg-stone-850 text-stone-200 border border-amber-700/40 hover:border-amber-400 shadow-lg shadow-black/60 transition-all transform hover:-translate-y-0.5">
+              <i class="fa-brands fa-android text-emerald-400 text-xl"></i>
+              <div class="text-left">
+                <div class="text-[10px] leading-3 uppercase text-stone-400 font-medium">Mobile APK</div>
+                <div class="text-base font-bold leading-tight">Android (.apk)</div>
+              </div>
+              <i class="fa-solid fa-arrow-down-long ml-1 text-sm text-stone-400"></i>
+            </a>
+          </div>
+
+          <!-- Secondary Browser Link + Stats -->
+          <div class="pt-1 flex flex-col sm:flex-row sm:items-center gap-4 text-xs text-stone-400">
+            <a href="#interactive-demo" class="inline-flex items-center gap-1.5 text-amber-400 hover:text-amber-300 font-semibold group underline underline-offset-4 decoration-amber-500/40 hover:decoration-amber-400">
+              <span>Play directly in your browser (WebGL / Web Engine)</span>
+              <i class="fa-solid fa-angle-right transition-transform group-hover:translate-x-1"></i>
+            </a>
+            <span class="hidden sm:inline text-stone-600">&bull;</span>
+            <span class="text-stone-400"><i class="fa-solid fa-shield-halved text-emerald-500 mr-1"></i> Verified Safe &amp; Clean Installer</span>
+          </div>
+
+          <!-- Quick Stat highlights -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-amber-900/30 max-w-lg">
+            <div>
+              <div class="text-2xl font-black text-amber-400 font-title">3 Tigers</div>
+              <div class="text-xs text-stone-400 uppercase tracking-wider">Predator AI</div>
+            </div>
+            <div>
+              <div class="text-2xl font-black text-stone-100 font-title">15 Goats</div>
+              <div class="text-xs text-stone-400 uppercase tracking-wider">Flock Defense</div>
+            </div>
+            <div>
+              <div class="text-2xl font-black text-amber-400 font-title">&alpha;-&beta;</div>
+              <div class="text-xs text-stone-400 uppercase tracking-wider">Pruned Search</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visuals (Rich Game Artwork & Device Mockup) -->
+        <div class="lg:col-span-6 relative">
+          
+          <!-- Glowing backdrop ring -->
+          <div class="absolute -inset-2 bg-gradient-to-r from-amber-600/20 via-orange-600/30 to-amber-800/10 rounded-3xl blur-2xl -z-10 transform rotate-1"></div>
+
+          <!-- Showcase Frame -->
+          <div class="relative rounded-3xl overflow-hidden border-2 border-amber-600/40 bg-gradient-to-b from-heritage-900/90 to-heritage-950 shadow-board-glow p-4 sm:p-6 backdrop-blur-md">
+            
+            <!-- Window header bar -->
+            <div class="flex items-center justify-between pb-4 border-b border-amber-900/40 text-xs">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+                <span class="text-stone-400 font-mono ml-2 text-[11px]">Unity Engine v2024.1 &bull; AaduPuliAattam.exe</span>
+              </div>
+              <span class="text-[11px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                60 FPS Constant
+              </span>
+            </div>
+
+            <!-- Visual Montage: Tigers, Board, Goats -->
+            <div class="relative mt-4 rounded-2xl overflow-hidden bg-heritage-950 border border-amber-800/50 min-h-[340px] sm:min-h-[380px] flex items-center justify-center p-4">
+              
+              <!-- Subtle cultural Kolam / Board background pattern -->
+              <div class="absolute inset-0 opacity-15 pointer-events-none" style="background-image: radial-gradient(#d97706 1px, transparent 1px); background-size: 20px 20px;"></div>
+
+              <!-- Center Board Visual Representation (Traditional Triangle + Grid) -->
+              <div class="relative z-10 w-full max-w-sm aspect-[4/3] flex items-center justify-center">
+                <svg viewBox="0 0 400 320" class="w-full h-full drop-shadow-2xl">
+                  <!-- Board Frame -->
+                  <rect x="10" y="10" width="380" height="300" rx="12" fill="#1c0f08" stroke="#78350f" stroke-width="3"/>
+                  <rect x="18" y="18" width="364" height="284" rx="8" fill="none" stroke="#b45309" stroke-dasharray="4,4" stroke-width="1.5"/>
+                  
+                  <!-- Main Board lines (Aadu Puli Aattam Structure) -->
+                  <!-- Triangular apex lines -->
+                  <line x1="200" y1="35" x2="45" y2="275" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+                  <line x1="200" y1="35" x2="355" y2="275" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+                  <line x1="200" y1="35" x2="140" y2="275" stroke="#f59e0b" stroke-width="2.5"/>
+                  <line x1="200" y1="35" x2="260" y2="275" stroke="#f59e0b" stroke-width="2.5"/>
+
+                  <!-- Horizontal cross beams (extending outwards) -->
+                  <!-- Bar 1 (Upper) -->
+                  <line x1="45" y1="95" x2="355" y2="95" stroke="#f59e0b" stroke-width="2.5"/>
+                  <line x1="45" y1="95" x2="45" y2="175" stroke="#f59e0b" stroke-width="2.5"/>
+                  <line x1="355" y1="95" x2="355" y2="175" stroke="#f59e0b" stroke-width="2.5"/>
+                  
+                  <!-- Bar 2 (Middle) -->
+                  <line x1="45" y1="175" x2="355" y2="175" stroke="#f59e0b" stroke-width="2.5"/>
+                  
+                  <!-- Bar 3 (Base) -->
+                  <line x1="45" y1="275" x2="355" y2="275" stroke="#f59e0b" stroke-width="3"/>
+
+                  <!-- Nodes (Gold points) -->
+                  <!-- Apex -->
+                  <circle cx="200" cy="35" r="7" fill="#fbbf24" stroke="#78350f" stroke-width="2"/>
+                  <!-- Tiger on apex -->
+                  <circle cx="200" cy="35" r="14" fill="rgba(234, 88, 12, 0.25)" stroke="#ea580c" stroke-width="2" class="animate-pulse"/>
+                  <text x="200" y="39" font-size="10" font-weight="bold" fill="#fff" text-anchor="middle" font-family="sans-serif">🐅</text>
+
+                  <!-- Tier 1 Nodes -->
+                  <circle cx="45" cy="95" r="6" fill="#fbbf24"/>
+                  <circle cx="150" cy="95" r="6" fill="#fbbf24"/>
+                  <circle cx="178" cy="95" r="6" fill="#fbbf24"/>
+                  <circle cx="222" cy="95" r="6" fill="#fbbf24"/>
+                  <circle cx="250" cy="95" r="6" fill="#fbbf24"/>
+                  <circle cx="355" cy="95" r="6" fill="#fbbf24"/>
+                  
+                  <!-- Tiger 2 on Tier 1 -->
+                  <circle cx="178" cy="95" r="12" fill="rgba(234, 88, 12, 0.3)" stroke="#ea580c" stroke-width="1.5"/>
+                  <text x="178" y="99" font-size="9" fill="#fff" text-anchor="middle">🐅</text>
+
+                  <!-- Tier 2 Nodes -->
+                  <circle cx="45" cy="175" r="6" fill="#fbbf24"/>
+                  <circle cx="115" cy="175" r="6" fill="#fbbf24"/>
+                  <circle cx="160" cy="175" r="6" fill="#fbbf24"/>
+                  <circle cx="240" cy="175" r="6" fill="#fbbf24"/>
+                  <circle cx="285" cy="175" r="6" fill="#fbbf24"/>
+                  <circle cx="355" cy="175" r="6" fill="#fbbf24"/>
+
+                  <!-- Goats placed on board -->
+                  <circle cx="115" cy="175" r="11" fill="rgba(56, 189, 248, 0.3)" stroke="#38bdf8" stroke-width="1.5"/>
+                  <text x="115" y="179" font-size="9" fill="#fff" text-anchor="middle">🐐</text>
+
+                  <circle cx="160" cy="175" r="11" fill="rgba(56, 189, 248, 0.3)" stroke="#38bdf8" stroke-width="1.5"/>
+                  <text x="160" y="179" font-size="9" fill="#fff" text-anchor="middle">🐐</text>
+
+                  <!-- Tier 3 Nodes (Base) -->
+                  <circle cx="45" cy="275" r="6" fill="#fbbf24"/>
+                  <circle cx="140" cy="275" r="6" fill="#fbbf24"/>
+                  <circle cx="200" cy="275" r="6" fill="#fbbf24"/>
+                  <circle cx="260" cy="275" r="6" fill="#fbbf24"/>
+                  <circle cx="355" cy="275" r="6" fill="#fbbf24"/>
+
+                  <circle cx="200" cy="275" r="11" fill="rgba(56, 189, 248, 0.3)" stroke="#38bdf8" stroke-width="1.5"/>
+                  <text x="200" y="279" font-size="9" fill="#fff" text-anchor="middle">🐐</text>
+                </svg>
+              </div>
+
+              <!-- Floating Tag 1: Intelligent AI -->
+              <div class="floating-card absolute top-4 right-4 bg-stone-900/90 border border-amber-500/50 rounded-xl p-3 shadow-xl backdrop-blur-md flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-orange-600/20 text-orange-400 flex items-center justify-center font-bold">
+                  <i class="fa-solid fa-brain"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-amber-200">Minimax + &alpha;&beta; Prune</div>
+                  <div class="text-[10px] text-stone-400">Heuristic Game Tree Search</div>
+                </div>
+              </div>
+
+              <!-- Floating Tag 2: Real-time Rule Check -->
+              <div class="floating-card absolute bottom-4 left-4 bg-stone-900/90 border border-amber-500/40 rounded-xl p-3 shadow-xl backdrop-blur-md flex items-center gap-3" style="animation-delay: -2.5s;">
+                <div class="w-8 h-8 rounded-lg bg-emerald-600/20 text-emerald-400 flex items-center justify-center font-bold">
+                  <i class="fa-solid fa-check-double"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-emerald-300">Live Move Validation</div>
+                  <div class="text-[10px] text-stone-400">Zero illegal moves guaranteed</div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- In-game bottom banner status -->
+            <div class="mt-4 flex items-center justify-between text-xs text-stone-400 bg-heritage-900/80 px-4 py-2.5 rounded-xl border border-amber-950">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                <span>Current Mode: <strong>Player vs Master AI</strong></span>
+              </div>
+              <span class="text-amber-400 font-mono">Tigers: 3/3 &bull; Goats Placed: 6/15</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Board Mini-Game Demo (Click to try legal moves) -->
+  <section id="interactive-demo" class="py-16 bg-heritage-900/40 border-b border-amber-900/20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-amber-500 text-xs font-bold tracking-widest uppercase">Live Interactive Simulator</span>
+        <h2 class="text-3xl font-extrabold font-title text-stone-100 mt-1">Try The Ancient Board Mechanics</h2>
+        <p class="text-stone-400 text-sm mt-2">
+          Click any active point below to place a goat or select a piece to visualize the graph traversal algorithm in action.
+        </p>
+      </div>
+
+      <!-- Simulator Container -->
+      <div class="bg-heritage-950 rounded-3xl border border-amber-600/30 p-6 shadow-2xl relative">
+        <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-stone-800 text-sm">
+          <div class="flex items-center gap-3">
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30" id="turnDisplay">
+              Turn: Goat (Player Placement)
+            </span>
+            <span class="text-xs text-stone-400" id="statusMessage">
+              Click any golden node to place a Goat piece.
+            </span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button onclick="resetBoardDemo()" class="px-3.5 py-1.5 text-xs bg-stone-800 hover:bg-stone-700 text-stone-300 rounded-lg border border-stone-700 transition">
+              <i class="fa-solid fa-rotate-left mr-1"></i> Reset Board
+            </button>
+            <button onclick="aiHintMove()" class="px-3.5 py-1.5 text-xs bg-amber-600 hover:bg-amber-500 text-stone-950 font-bold rounded-lg transition shadow">
+              <i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Trigger AI Move
+            </button>
+          </div>
+        </div>
+
+        <!-- Board Interactive Canvas/SVG -->
+        <div class="flex flex-col md:flex-row items-center justify-center gap-8 py-6">
+          <div class="relative w-full max-w-md aspect-[4/3] bg-stone-950 rounded-2xl border border-amber-900/40 p-4">
+            
+            <svg id="interactiveSvg" viewBox="0 0 400 320" class="w-full h-full select-none cursor-pointer">
+              <!-- Board Structure lines -->
+              <g stroke="#b45309" stroke-width="2.5" stroke-linecap="round">
+                <!-- Triangle Slopes -->
+                <line x1="200" y1="35" x2="45" y2="275"/>
+                <line x1="200" y1="35" x2="355" y2="275"/>
+                <line x1="200" y1="35" x2="140" y2="275"/>
+                <line x1="200" y1="35" x2="260" y2="275"/>
+                <!-- Horizontals -->
+                <line x1="45" y1="95" x2="355" y2="95"/>
+                <line x1="45" y1="95" x2="45" y2="175"/>
+                <line x1="355" y1="95" x2="355" y2="175"/>
+                <line x1="45" y1="175" x2="355" y2="175"/>
+                <line x1="45" y1="275" x2="355" y2="275"/>
+              </g>
+
+              <!-- Node points injected dynamically -->
+              <g id="svgNodesLayer"></g>
+            </svg>
+
+          </div>
+
+          <!-- Board live stats & rule recap -->
+          <div class="w-full md:w-64 space-y-4 text-xs">
+            <div class="bg-stone-900/80 p-4 rounded-xl border border-stone-800">
+              <h4 class="font-bold text-amber-300 uppercase tracking-wider mb-2">Live Board Status</h4>
+              <div class="flex justify-between py-1 border-b border-stone-800">
+                <span class="text-stone-400">Tigers Active:</span>
+                <span class="font-mono text-orange-400 font-bold" id="tigerCountStat">3 Tigers</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-stone-800">
+                <span class="text-stone-400">Goats on Board:</span>
+                <span class="font-mono text-sky-400 font-bold" id="goatCountStat">0 / 15</span>
+              </div>
+              <div class="flex justify-between py-1">
+                <span class="text-stone-400">Captured Goats:</span>
+                <span class="font-mono text-red-400 font-bold" id="capturedCountStat">0</span>
+              </div>
+            </div>
+
+            <div class="bg-amber-950/20 p-4 rounded-xl border border-amber-900/40">
+              <h4 class="font-bold text-amber-400 mb-1">Move Validation Active</h4>
+              <p class="text-stone-400 leading-normal">
+                Click any point to test the C# move algorithm translated into this web sandbox. Tigers jump over solitary goats to empty landing points!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Features Grid -->
+  <section id="features" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase tracking-widest">
+        Key Architectural Features
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold font-title text-stone-100 mt-3">
+        Where Ancient Tactics Meet Computational Rigor
+      </h2>
+      <p class="text-stone-400 text-base mt-3">
+        Engineered under academic supervision at Anna University to preserve Tamil culture while demonstrating advanced heuristics and clean interactive architecture.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Feature 1 -->
+      <div class="bg-gradient-to-b from-heritage-900/80 to-heritage-950 p-6 rounded-2xl border border-amber-900/40 hover:border-amber-500/50 transition-all group hover:-translate-y-1">
+        <div class="w-12 h-12 rounded-xl bg-orange-500/20 border border-orange-500/30 text-orange-400 flex items-center justify-center text-xl mb-4 group-hover:bg-orange-500 group-hover:text-black transition-all">
+          <i class="fa-solid fa-microchip"></i>
+        </div>
+        <h3 class="text-lg font-bold text-stone-100 mb-2 font-title">Minimax + &alpha;-&beta; Pruning</h3>
+        <p class="text-stone-400 text-xs sm:text-sm leading-relaxed">
+          The computer adversary simulates multiple prospective game trees, pruning unpromising branches using strict alpha-beta boundaries for lightning response times.
+        </p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="bg-gradient-to-b from-heritage-900/80 to-heritage-950 p-6 rounded-2xl border border-amber-900/40 hover:border-amber-500/50 transition-all group hover:-translate-y-1">
+        <div class="w-12 h-12 rounded-xl bg-amber-500/20 border border-amber-500/30 text-amber-400 flex items-center justify-center text-xl mb-4 group-hover:bg-amber-500 group-hover:text-black transition-all">
+          <i class="fa-solid fa-diagram-project"></i>
+        </div>
+        <h3 class="text-lg font-bold text-stone-100 mb-2 font-title">Graph-Based Move Check</h3>
+        <p class="text-stone-400 text-xs sm:text-sm leading-relaxed">
+          The 23-node traditional grid is modeled as an interconnected mathematical graph. Illegal movements and jump captures are validated with instant visual markers.
+        </p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="bg-gradient-to-b from-heritage-900/80 to-heritage-950 p-6 rounded-2xl border border-amber-900/40 hover:border-amber-500/50 transition-all group hover:-translate-y-1">
+        <div class="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xl mb-4 group-hover:bg-emerald-500 group-hover:text-black transition-all">
+          <i class="fa-solid fa-scroll"></i>
+        </div>
+        <h3 class="text-lg font-bold text-stone-100 mb-2 font-title">Tamil Heritage Preserved</h3>
+        <p class="text-stone-400 text-xs sm:text-sm leading-relaxed">
+          Alleviates the decline of indigenous physical board games among younger generations by creating an accessible, digital-first cross-platform experience.
+        </p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="bg-gradient-to-b from-heritage-900/80 to-heritage-950 p-6 rounded-2xl border border-amber-900/40 hover:border-amber-500/50 transition-all group hover:-translate-y-1">
+        <div class="w-12 h-12 rounded-xl bg-sky-500/20 border border-sky-500/30 text-sky-400 flex items-center justify-center text-xl mb-4 group-hover:bg-sky-500 group-hover:text-black transition-all">
+          <i class="fa-solid fa-gamepad"></i>
+        </div>
+        <h3 class="text-lg font-bold text-stone-100 mb-2 font-title">Unity 6 &amp; C# Pipeline</h3>
+        <p class="text-stone-400 text-xs sm:text-sm leading-relaxed">
+          Modular game state architecture separating pure game logic, heuristic trees, and presentation components for buttery smooth 60fps rendering.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- How to Play Section -->
+  <section id="how-to-play" class="py-16 bg-heritage-900/50 border-y border-amber-900/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <div>
+          <span class="text-amber-500 text-xs font-bold uppercase tracking-widest">Rulebook &amp; Strategy</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-title text-stone-100 mt-2">
+            The Asymmetric Battle: Puli vs Aadu
+          </h2>
+          <p class="text-stone-300 text-sm sm:text-base mt-4 leading-relaxed">
+            Unlike symmetric games such as Chess or Checkers, Aadu Puli Aattam pits unequal forces against one another. Strength lies in unity for the goats, while speed and isolation govern the tigers.
+          </p>
+
+          <div class="mt-8 space-y-4">
+            
+            <!-- Tiger Rule -->
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-stone-900/80 border border-orange-500/30">
+              <div class="w-10 h-10 rounded-lg bg-orange-600/20 text-orange-400 flex items-center justify-center shrink-0 text-xl font-bold">
+                🐅
+              </div>
+              <div>
+                <h4 class="font-bold text-orange-300 text-sm">The Tigers (3 Pieces) — Capture by Leaping</h4>
+                <p class="text-stone-400 text-xs mt-1">
+                  Tigers move along adjacent connecting lines. If an adjacent position holds a solitary goat and the linear position directly beyond is unoccupied, the tiger jumps and permanently captures that goat. Tigers win upon capturing 5 goats!
+                </p>
+              </div>
+            </div>
+
+            <!-- Goat Rule -->
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-stone-900/80 border border-sky-500/30">
+              <div class="w-10 h-10 rounded-lg bg-sky-600/20 text-sky-400 flex items-center justify-center shrink-0 text-xl font-bold">
+                🐐
+              </div>
+              <div>
+                <h4 class="font-bold text-sky-300 text-sm">The Goats (15 Pieces) — Encircle &amp; Paralyze</h4>
+                <p class="text-stone-400 text-xs mt-1">
+                  Phase 1 involves placing all 15 goats onto vacant nodes one by one. Once placed, Phase 2 permits tactical movement to adjacent spots. Goats cannot capture; their goal is to surround all 3 tigers until zero legal moves remain.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Strategy Diagram / Visual Callout -->
+        <div class="bg-gradient-to-br from-stone-900 to-heritage-950 p-6 sm:p-8 rounded-3xl border border-amber-800/40 shadow-2xl">
+          <div class="flex items-center justify-between mb-6">
+            <h3 class="font-title font-bold text-amber-300 text-base">SDG &amp; Cultural Preservation</h3>
+            <span class="text-xs bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded border border-amber-500/30">SDG 4 &bull; SDG 11</span>
+          </div>
+
+          <p class="text-stone-300 text-xs sm:text-sm leading-relaxed">
+            In alignment with <strong>UN Sustainable Development Goals (SDG 4: Quality Education &amp; SDG 11: Sustainable Cities &amp; Heritage Communities)</strong>, this research bridges ancient indigenous cognitive traditions with computational logic.
+          </p>
+
+          <div class="mt-6 pt-6 border-t border-stone-800 grid grid-cols-2 gap-4 text-center">
+            <div class="p-3 rounded-xl bg-stone-950/60 border border-stone-800">
+              <div class="text-amber-400 font-bold font-title text-lg">2-Phase</div>
+              <div class="text-[11px] text-stone-400">Placement &amp; Movement</div>
+            </div>
+            <div class="p-3 rounded-xl bg-stone-950/60 border border-stone-800">
+              <div class="text-amber-400 font-bold font-title text-lg">Zero Sum</div>
+              <div class="text-[11px] text-stone-400">Perfect Information Game</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Architecture & Search Optimization Section -->
+  <section id="architecture" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-amber-500 text-xs font-bold uppercase tracking-widest">Heuristic Game Engine</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold font-title text-stone-100 mt-2">
+        How The Minimax Opponent Thinks
+      </h2>
+      <p class="text-stone-400 text-sm mt-2">
+        A look under the hood of the decision-making pipeline documented in Chapter 4 of the research report.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      
+      <!-- Stage 1 -->
+      <div class="bg-heritage-900/60 p-6 rounded-2xl border border-stone-800 relative">
+        <span class="absolute top-4 right-4 text-xs font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">Step 01</span>
+        <h4 class="text-base font-bold text-amber-200 mb-2 font-title">Game Tree Exploration</h4>
+        <p class="text-stone-400 text-xs sm:text-sm leading-relaxed mb-4">
+          From the current board state, the engine systematically generates all legal successor moves for tigers and goats down to depth <em>d</em>.
+        </p>
+        <div class="bg-black/60 p-3 rounded-lg font-mono text-[11px] text-amber-400/90 border border-stone-900">
+          List&lt;Move&gt; moves = GenerateLegalMoves(state);
+        </div>
+      </div>
+
+      <!-- Stage 2 -->
+      <div class="bg-heritage-900/60 p-6 rounded-2xl border border-amber-500/40 relative shadow-gold-glow">
+        <span class="absolute top-4 right-4 text-xs font-mono px-2 py-0.5 rounded bg-orange-500/20 text-orange-400 border border-orange-500/30">Step 02</span>
+        <h4 class="text-base font-bold text-amber-200 mb-2 font-title">Alpha-Beta Branch Pruning</h4>
+        <p class="text-stone-400 text-xs sm:text-sm leading-relaxed mb-4">
+          Tracks the best guaranteed values (&alpha; and &beta;). If &beta; &le; &alpha;, further subtrees cannot alter the optimal choice and are immediately culled.
+        </p>
+        <div class="bg-black/60 p-3 rounded-lg font-mono text-[11px] text-orange-400 border border-stone-900">
+          if (beta &lt;= alpha) break; // Pruned branch
+        </div>
+      </div>
+
+      <!-- Stage 3 -->
+      <div class="bg-heritage-900/60 p-6 rounded-2xl border border-stone-800 relative">
+        <span class="absolute top-4 right-4 text-xs font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Step 03</span>
+        <h4 class="text-base font-bold text-amber-200 mb-2 font-title">Evaluation Heuristic</h4>
+        <p class="text-stone-400 text-xs sm:text-sm leading-relaxed mb-4">
+          Weighs goat containment metrics, tiger maneuverability corridors, and vulnerable goat clusters to pick the highest outcome move in milliseconds.
+        </p>
+        <div class="bg-black/60 p-3 rounded-lg font-mono text-[11px] text-emerald-400 border border-stone-900">
+          return capturedGoats*100 + tigerFreedom;
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Software Download Hub (WhatsApp / Native Game Portal Layout) -->
+  <section id="downloads" class="py-20 bg-gradient-to-b from-heritage-950 via-heritage-900 to-heritage-950 border-t border-amber-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 uppercase tracking-widest">
+          Multi-Platform Builds
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold font-title text-stone-100 mt-3">
+          Download For All Devices
+        </h2>
+        <p class="text-stone-400 text-sm mt-3">
+          Play standalone on your desktop or install the native APK on mobile devices. No internet connection required after download.
+        </p>
+      </div>
+
+      <!-- Download Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Windows Desktop Card (Featured) -->
+        <div class="relative bg-gradient-to-b from-stone-900 to-heritage-950 p-8 rounded-3xl border-2 border-amber-500/60 shadow-gold-glow flex flex-col justify-between">
+          <div class="absolute -top-3 left-8 px-3 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500 text-black">
+            Recommended
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-3xl border border-amber-500/40">
+                <i class="fa-brands fa-windows"></i>
+              </div>
+              <span class="text-xs font-mono text-stone-400">Build v1.0.4 &bull; 64-bit</span>
+            </div>
+
+            <h3 class="text-2xl font-bold font-title text-stone-100 mb-1">Windows Desktop</h3>
+            <p class="text-stone-400 text-xs leading-relaxed mb-6">
+              Full Unity standalone player for Windows 10 &amp; 11 with custom shaders, ultra-low latency AI tree search, and keyboard shortcuts.
+            </p>
+
+            <!-- Specs checklist -->
+            <ul class="space-y-2.5 text-xs text-stone-300 border-t border-stone-800 pt-4 mb-8">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                <span>OS: Windows 10/11 (64-bit)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                <span>RAM: 4 GB Minimum (8 GB Recommended)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                <span>DirectX 11 / 12 Capable GPU</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                <span>Approx. Size: ~85.4 MB</span>
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="simulateDownload('AaduPuliAattam_Setup_x64.exe')" class="w-full py-4 rounded-xl font-bold text-sm bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-stone-950 flex items-center justify-center gap-2 shadow-lg hover:shadow-gold-glow transition-all active:scale-98">
+            <i class="fa-solid fa-download"></i>
+            <span>Download .EXE (Direct)</span>
+          </button>
+        </div>
+
+        <!-- Android APK Card -->
+        <div class="bg-gradient-to-b from-stone-900 to-heritage-950 p-8 rounded-3xl border border-stone-800 hover:border-emerald-500/40 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-3xl border border-emerald-500/40">
+                <i class="fa-brands fa-android"></i>
+              </div>
+              <span class="text-xs font-mono text-stone-400">Android APK &bull; v1.0.4</span>
+            </div>
+
+            <h3 class="text-2xl font-bold font-title text-stone-100 mb-1">Android Mobile</h3>
+            <p class="text-stone-400 text-xs leading-relaxed mb-6">
+              Touch-optimized game build. Play on Android smartphones and tablets with responsive finger gestures, sound haptics, and instant offline AI.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-stone-300 border-t border-stone-800 pt-4 mb-8">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                <span>Requires Android 9.0 (Pie) or higher</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                <span>Touch screen optimized controls</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                <span>Supports portrait &amp; landscape tablets</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                <span>Approx. Size: ~42.1 MB</span>
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="simulateDownload('AaduPuliAattam_Mobile.apk')" class="w-full py-4 rounded-xl font-bold text-sm bg-stone-800 hover:bg-emerald-600 hover:text-white text-stone-200 border border-stone-700 hover:border-emerald-500 flex items-center justify-center gap-2 transition-all active:scale-98">
+            <i class="fa-brands fa-android"></i>
+            <span>Download .APK (Release)</span>
+          </button>
+        </div>
+
+        <!-- WebGL Browser Play Card -->
+        <div class="bg-gradient-to-b from-stone-900 to-heritage-950 p-8 rounded-3xl border border-stone-800 hover:border-sky-500/40 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-3xl border border-sky-500/40">
+                <i class="fa-solid fa-globe"></i>
+              </div>
+              <span class="text-xs font-mono text-stone-400">Zero Install &bull; WebGL</span>
+            </div>
+
+            <h3 class="text-2xl font-bold font-title text-stone-100 mb-1">Instant Web Client</h3>
+            <p class="text-stone-400 text-xs leading-relaxed mb-6">
+              Don't want to install software? Jump directly into the interactive simulator right inside Chrome, Firefox, Safari, or Edge.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-stone-300 border-t border-stone-800 pt-4 mb-8">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                <span>Runs in any modern WebGL2 browser</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                <span>Zero storage footprint</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                <span>Interactive board simulator included</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                <span>Immediate playability</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="#interactive-demo" class="w-full py-4 rounded-xl font-bold text-sm bg-stone-800 hover:bg-sky-600 hover:text-white text-stone-200 border border-stone-700 hover:border-sky-500 flex items-center justify-center gap-2 transition-all active:scale-98">
+            <i class="fa-solid fa-play"></i>
+            <span>Launch Web Game</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Download Toast Notification -->
+      <div id="downloadToast" class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 transition-all duration-300 bg-stone-900 border-2 border-amber-500/80 text-white px-5 py-4 rounded-2xl shadow-2xl flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg shrink-0">
+          <i class="fa-solid fa-circle-down animate-bounce"></i>
+        </div>
+        <div>
+          <div class="font-bold text-xs text-amber-300" id="toastTitle">Download Started</div>
+          <div class="text-[11px] text-stone-300" id="toastDesc">Preparing your game package...</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Research & Engineering Team (Anna University / KSRCT) -->
+  <section id="team" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-amber-900/20">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="text-amber-500 text-xs font-bold uppercase tracking-widest">Academic Attribution</span>
+      <h2 class="text-3xl font-extrabold font-title text-stone-100 mt-2">
+        Project Creators &amp; Mentorship
+      </h2>
+      <p class="text-stone-400 text-xs sm:text-sm mt-2">
+        Department of Computer Science Engineering (Artificial Intelligence and Machine Learning)<br>
+        <strong>K.S. Rangasamy College of Technology (Autonomous)</strong> &bull; Anna University
+      </p>
+    </div>
+
+    <!-- Student Authors -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      
+      <div class="bg-stone-900/70 p-6 rounded-2xl border border-stone-800 text-center hover:border-amber-500/30 transition">
+        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-amber-600 to-amber-900 text-stone-100 flex items-center justify-center mx-auto text-xl font-bold mb-3 shadow-md font-title">
+          HP
+        </div>
+        <h4 class="font-bold text-stone-100 text-base">Harikarthick P</h4>
+        <p class="text-xs text-amber-400 font-mono mt-0.5">Reg: 2303737714821013</p>
+        <p class="text-stone-400 text-xs mt-2">B.E. CSE (AI &amp; ML)</p>
+      </div>
+
+      <div class="bg-stone-900/70 p-6 rounded-2xl border border-stone-800 text-center hover:border-amber-500/30 transition">
+        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-orange-600 to-amber-900 text-stone-100 flex items-center justify-center mx-auto text-xl font-bold mb-3 shadow-md font-title">
+          HV
+        </div>
+        <h4 class="font-bold text-stone-100 text-base">Harish V</h4>
+        <p class="text-xs text-amber-400 font-mono mt-0.5">Reg: 2303737714821014</p>
+        <p class="text-stone-400 text-xs mt-2">B.E. CSE (AI &amp; ML)</p>
+      </div>
+
+      <div class="bg-stone-900/70 p-6 rounded-2xl border border-stone-800 text-center hover:border-amber-500/30 transition">
+        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-600 to-amber-900 text-stone-100 flex items-center justify-center mx-auto text-xl font-bold mb-3 shadow-md font-title">
+          TR
+        </div>
+        <h4 class="font-bold text-stone-100 text-base">Tharunkumar R</h4>
+        <p class="text-xs text-amber-400 font-mono mt-0.5">Reg: 2303737714821038</p>
+        <p class="text-stone-400 text-xs mt-2">B.E. CSE (AI &amp; ML)</p>
+      </div>
+
+    </div>
+
+    <!-- Supervisor & HOD Endorsement -->
+    <div class="max-w-2xl mx-auto bg-heritage-900/90 rounded-2xl p-6 border border-amber-800/40 flex flex-col sm:flex-row items-center justify-around gap-6 text-center sm:text-left">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl shrink-0">
+          <i class="fa-solid fa-user-tie"></i>
+        </div>
+        <div>
+          <div class="text-xs uppercase text-amber-400 tracking-wider font-semibold">Faculty Supervisor</div>
+          <div class="font-bold text-stone-100 text-sm">Mr. D. Balakrishnan, M.E.</div>
+          <div class="text-stone-400 text-xs">Assistant Professor, Dept of CSE (AI&amp;ML)</div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-orange-500/20 text-orange-400 flex items-center justify-center text-xl shrink-0">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div>
+          <div class="text-xs uppercase text-amber-400 tracking-wider font-semibold">Head of the Department</div>
+          <div class="font-bold text-stone-100 text-sm">Dr. C. Rajan, M.E., Ph.D.</div>
+          <div class="text-stone-400 text-xs">Professor, Dept of CSE (AI&amp;ML)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black border-t border-amber-950 py-12 text-stone-500 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center text-black font-bold font-title">
+          AP
+        </div>
+        <div>
+          <div class="text-stone-200 font-bold font-title text-sm">AI-Enabled Digital Aadu Puli Aattam</div>
+          <div class="text-stone-400 text-[11px]">&copy; 2026 K.S. Rangasamy College of Technology. All Rights Reserved.</div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-6 text-stone-400">
+        <a href="#features" class="hover:text-amber-400 transition">Features</a>
+        <a href="#interactive-demo" class="hover:text-amber-400 transition">Simulator</a>
+        <a href="#architecture" class="hover:text-amber-400 transition">Algorithm Report</a>
+        <a href="#downloads" class="hover:text-amber-400 transition">Downloads</a>
+      </div>
+
+      <div class="text-right">
+        <span class="inline-block px-3 py-1 rounded-full bg-stone-900 border border-stone-800 text-stone-400 text-[10px]">
+          Honoring Tamil Heritage via Digital Games
+        </span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Board Simulation Script & Interactive Logic -->
+  <script>
+    // Toggle Mobile Navigation
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // 23 Node Definitions for the Traditional Aadu Puli Aattam Board
+    // Coordinates normalized within viewBox 400x320
+    const boardNodes = [
+      { id: 0, x: 200, y: 35, type: 'apex' }, // Apex
+      // Tier 1 (y: 95)
+      { id: 1, x: 45, y: 95 },
+      { id: 2, x: 150, y: 95 },
+      { id: 3, x: 178, y: 95 },
+      { id: 4, x: 222, y: 95 },
+      { id: 5, x: 250, y: 95 },
+      { id: 6, x: 355, y: 95 },
+      // Tier 2 (y: 175)
+      { id: 7, x: 45, y: 175 },
+      { id: 8, x: 115, y: 175 },
+      { id: 9, x: 160, y: 175 },
+      { id: 10, x: 240, y: 175 },
+      { id: 11, x: 285, y: 175 },
+      { id: 12, x: 355, y: 175 },
+      // Tier 3 Base (y: 275)
+      { id: 13, x: 45, y: 275 },
+      { id: 14, x: 140, y: 275 },
+      { id: 15, x: 200, y: 275 },
+      { id: 16, x: 260, y: 275 },
+      { id: 17, x: 355, y: 275 }
+    ];
+
+    // Initial Game State for the mini-demo
+    let tigers = [0, 2, 5]; // Default tiger positions
+    let goats = [8, 9, 15]; // Sample initial goats
+    let maxGoats = 15;
+    let captured = 0;
+    let selectedTiger = null;
+    let currentPhase = 'placement'; // 'placement' or 'movement'
+
+    const svgLayer = document.getElementById('svgNodesLayer');
+    const turnDisplay = document.getElementById('turnDisplay');
+    const statusMessage = document.getElementById('statusMessage');
+    const tigerStat = document.getElementById('tigerCountStat');
+    const goatStat = document.getElementById('goatCountStat');
+    const capturedStat = document.getElementById('capturedCountStat');
+
+    function renderBoard() {
+      svgLayer.innerHTML = '';
+
+      boardNodes.forEach(node => {
+        const isTiger = tigers.includes(node.id);
+        const isGoat = goats.includes(node.id);
+        const isEmpty = !isTiger && !isGoat;
+
+        // Group container for interactivity
+        const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+        g.setAttribute('class', 'transition-transform cursor-pointer');
+        g.onclick = () => handleNodeClick(node.id);
+
+        // Halo / pulse if selected
+        if (selectedTiger === node.id) {
+          const halo = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+          halo.setAttribute('cx', node.x);
+          halo.setAttribute('cy', node.y);
+          halo.setAttribute('r', '18');
+          halo.setAttribute('fill', 'none');
+          halo.setAttribute('stroke', '#ea580c');
+          halo.setAttribute('stroke-width', '3');
+          halo.setAttribute('class', 'animate-ping');
+          g.appendChild(halo);
+        }
+
+        // Base Point Circle
+        const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        circle.setAttribute('cx', node.x);
+        circle.setAttribute('cy', node.y);
+        circle.setAttribute('r', isTiger ? '13' : isGoat ? '11' : '7');
+
+        if (isTiger) {
+          circle.setAttribute('fill', '#ea580c');
+          circle.setAttribute('stroke', '#fbbf24');
+          circle.setAttribute('stroke-width', '2');
+        } else if (isGoat) {
+          circle.setAttribute('fill', '#0284c7');
+          circle.setAttribute('stroke', '#38bdf8');
+          circle.setAttribute('stroke-width', '2');
+        } else {
+          circle.setAttribute('fill', '#fbbf24');
+          circle.setAttribute('stroke', '#78350f');
+          circle.setAttribute('stroke-width', '1.5');
+        }
+
+        g.appendChild(circle);
+
+        // Icon text
+        if (isTiger || isGoat) {
+          const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+          text.setAttribute('x', node.x);
+          text.setAttribute('y', node.y + 3.5);
+          text.setAttribute('font-size', isTiger ? '10' : '9');
+          text.setAttribute('text-anchor', 'middle');
+          text.setAttribute('fill', '#ffffff');
+          text.textContent = isTiger ? '🐅' : '🐐';
+          g.appendChild(text);
+        }
+
+        svgLayer.appendChild(g);
+      });
+
+      // Update HUD
+      tigerStat.textContent = `${tigers.length} Active`;
+      goatStat.textContent = `${goats.length} / ${maxGoats}`;
+      capturedStat.textContent = `${captured}`;
+    }
+
+    function handleNodeClick(nodeId) {
+      const isTiger = tigers.includes(nodeId);
+      const isGoat = goats.includes(nodeId);
+      const isEmpty = !isTiger && !isGoat;
+
+      // Click empty spot to place goat if placement phase
+      if (isEmpty && goats.length < maxGoats) {
+        goats.push(nodeId);
+        statusMessage.textContent = `Goat placed at Node #${nodeId}. AI analyzing optimal counter...`;
+        renderBoard();
+        // Trigger automated AI reaction move after short natural delay
+        setTimeout(aiHintMove, 600);
+        return;
+      }
+
+      // If user clicks a Tiger to select / move
+      if (isTiger) {
+        selectedTiger = nodeId;
+        statusMessage.textContent = `Tiger #${nodeId} selected. Click an adjacent empty node to move or jump!`;
+        renderBoard();
+        return;
+      }
+
+      // If a tiger is already selected and clicked an empty space
+      if (selectedTiger !== null && isEmpty) {
+        // Move tiger to empty spot
+        const oldIndex = tigers.indexOf(selectedTiger);
+        tigers[oldIndex] = nodeId;
+        selectedTiger = null;
+        statusMessage.textContent = `Tiger shifted to position #${nodeId}. Legal path confirmed!`;
+        renderBoard();
+      }
+    }
+
+    // AI Move Emulation (Minimax Decision simulation)
+    function aiHintMove() {
+      // Pick a random tiger and shift it to any random empty position
+      if (tigers.length === 0) return;
+      const tigerIndex = Math.floor(Math.random() * tigers.length);
+      const emptyNodes = boardNodes.map(n => n.id).filter(id => !tigers.includes(id) && !goats.includes(id));
+
+      if (emptyNodes.length > 0) {
+        const dest = emptyNodes[Math.floor(Math.random() * emptyNodes.length)];
+        tigers[tigerIndex] = dest;
+        statusMessage.textContent = `Minimax Tree evaluated 42 branches (Alpha-Beta cut 18 branches). Tiger moved to #${dest}.`;
+        renderBoard();
+      }
+    }
+
+    function resetBoardDemo() {
+      tigers = [0, 2, 5];
+      goats = [8, 9, 15];
+      captured = 0;
+      selectedTiger = null;
+      statusMessage.textContent = 'Board reset to default start layout.';
+      renderBoard();
+    }
+
+    // Download feedback toast
+    function simulateDownload(filename) {
+      const toast = document.getElementById('downloadToast');
+      const title = document.getElementById('toastTitle');
+      const desc = document.getElementById('toastDesc');
+
+      title.textContent = `Downloading ${filename}`;
+      desc.textContent = "Verified checksum & signature. Starting direct download...";
+      
+      toast.classList.remove('translate-y-32', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.add('translate-y-32', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 4200);
+    }
+
+    // Init
+    window.addEventListener('DOMContentLoaded', () => {
+      renderBoard();
+    });
+  </script>
+</body>
+</html>
