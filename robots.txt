@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tharunkumar1518.github.io/GD-Project/sitemap.xml
+Sitemap: https://gotiger.vercel.app/sitemap.xml
